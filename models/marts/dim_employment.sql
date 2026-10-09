@@ -1,0 +1,9 @@
+SELECT
+    SK_ID_CURR,
+    NAME_INCOME_TYPE,
+    OCCUPATION_TYPE,
+    ORGANIZATION_TYPE,
+    DAYS_EMPLOYED,
+    FLAG_EMP_PHONE,
+    FLAG_WORK_PHONE
+FROM {{ ref('stg_home_credit') }}

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: home_credit
+    database: CREDIT_RISK_DB
+    schema: PUBLIC
+    tables:
+      - name: APPLICATION_DATA

@@ -1,0 +1,66 @@
+version: 2
+
+models:
+
+  - name: stg_home_credit
+    description: "Staging model for cleaned Home Credit application data."
+    columns:
+      - name: SK_ID_CURR
+        description: "Unique identifier for the loan application."
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_applicant
+    description: "Applicant personal and family information."
+    columns:
+      - name: SK_ID_CURR
+        description: "Loan application identifier."
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_employment
+    description: "Applicant employment and income type information."
+    columns:
+      - name: SK_ID_CURR
+        description: "Loan application identifier."
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_location
+    description: "Applicant geographical and regional information."
+    columns:
+      - name: SK_ID_CURR
+        description: "Loan application identifier."
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_document
+    description: "Document submission information for each application."
+    columns:
+      - name: SK_ID_CURR
+        description: "Loan application identifier."
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_application
+    description: "Application contract and submission information."
+    columns:
+      - name: SK_ID_CURR
+        description: "Loan application identifier."
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_application
+    description: "Application financial and credit-related measures."
+    columns:
+      - name: SK_ID_CURR
+        description: "Loan application identifier."
+        tests:
+          - unique
+          - not_null
